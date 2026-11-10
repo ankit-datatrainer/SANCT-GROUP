@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Antenna Calculator at Sanct Group, RF antenna engineering.">
+  <title>Antenna Calculator | Sanct Group</title>
+  <link rel="icon" href="assets/sanct-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="stitch.css">
+  <script src="stitch.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head"><div class="shell head-inner">
+    <a href="index.html" class="brand"><img src="assets/sanct-mark.svg" alt="" width="40" height="40"><span>SANCT<span> GROUP</span></span></a><button class="stitch-menu" aria-controls="site-nav" aria-expanded="false" hidden>Menu</button>
+    <nav id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="antenna-calculator.html" aria-current="page">Calculator</a><a href="contact.html">Contact</a></nav>
+    <a class="head-cta" href="contact.html">Project inquiry <span aria-hidden="true">↗</span></a>
+  </div></header>
+  <main id="main">
+    <section class="scene hero inner-hero" id="section-1">
+      <figure class="hero-media"><img src="assets/goldstone-dish.webp" alt="A 34-metre dish antenna at the Goldstone Deep Space Communications Complex" width="1280" height="853" fetchpriority="high"><figcaption>Goldstone beam-waveguide antenna · <a href="https://science.nasa.gov/resource/goldstone-antenna/">NASA/JPL-Caltech</a></figcaption></figure>
+      <div class="shell scene-inner" data-reveal>
+        <p class="kicker"><span>01 / 08</span> ENGINEERING TOOL</p>
+        <h1>Antenna wavelength <em>calculator.</em></h1>
+        <p class="intro">Estimate free-space wavelength and ideal half- and quarter-wave lengths.</p><a class="pill" href="#section-2">Jump to calculator <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="scene paper" id="section-2">
+      <div class="shell scene-inner" data-reveal>
+        <p class="kicker"><span>02 / 08</span> LIVE CALCULATOR</p>
+        <h2>Enter a <em>frequency.</em></h2>
+        <form id="calculator" class="panel">
+          <label for="frequency">Frequency</label>
+          <div class="input-row">
+            <input id="frequency" name="frequency" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="2.4" required aria-describedby="frequency-help frequency-error">
+            <select id="unit" name="unit" aria-label="Frequency unit">
+              <option value="1000000">MHz</option>
+              <option value="1000000000" selected>GHz</option>
+            </select>
+          </div>
+          <p id="frequency-help" class="frequency-help">Use a decimal point or comma, without thousands separators. Results update as you type.</p>
+          <p id="frequency-error" role="status"></p>
+          <div class="frequency-presets" role="group" aria-label="Example frequencies" hidden>
+            <span>Try an example</span>
+            <button type="button" data-frequency="433" data-unit="1000000">433 MHz</button>
+            <button type="button" data-frequency="915" data-unit="1000000">915 MHz</button>
+            <button type="button" data-frequency="2.4" data-unit="1000000000">2.4 GHz</button>
+            <button type="button" data-frequency="5.8" data-unit="1000000000">5.8 GHz</button>
+          </div>
+          <button class="pill" type="submit">Calculate lengths</button>
+          <dl class="rows results" aria-live="polite" aria-atomic="true">
+            <div><dt>Wavelength</dt><dd id="full">124.91 mm</dd></div>
+            <div><dt>Half-wave</dt><dd id="half">62.46 mm</dd></div>
+            <div><dt>Quarter-wave</dt><dd id="quarter">31.23 mm</dd></div>
+          </dl>
+        </form>
+      </div>
+    </section>
+    <section class="scene lime" id="section-3">
+      <div class="shell scene-inner" data-reveal>
+        <p class="kicker"><span>03 / 08</span> THE FORMULA</p>
+        <h2>Wavelength = <em>c ÷ f.</em></h2>
+        <p class="intro">Divide the speed of light in vacuum (299,792,458 m/s) by frequency in hertz. The calculator displays the result in millimetres.</p>
+      </div>
+    </section>
+    <section class="scene ink" id="section-4">
+      <div class="shell scene-inner" data-reveal>
+        <p class="kicker"><span>04 / 08</span> READING THE RESULTS</p>
+        <h2>One wave. <em>Three lengths.</em></h2>
+        <dl class="rows"><div><dt>Full wavelength</dt><dd>The distance covered by one complete cycle in free space.</dd></div><div><dt>Half-wave</dt><dd>One half of the full wavelength.</dd></div><div><dt>Quarter-wave</dt><dd>One quarter of the full wavelength.</dd></div></dl>
+      </div>
+    </section>
+    <section class="scene paper" id="section-5">
+      <div class="shell scene-inner" data-reveal>
+        <p class="kicker"><span>05 / 08</span> WORKED EXAMPLE</p>
+        <h2>A 2.4 GHz <em>signal.</em></h2>
+        <div class="tiles"><article><span class="tile-num">01</span><h3>124.91 mm</h3><p>Free-space wavelength.</p></article><article><span class="tile-num">02</span><h3>62.46 mm</h3><p>Ideal half-wave length.</p></article><article><span class="tile-num">03</span><h3>31.23 mm</h3><p>Ideal quarter-wave length.</p></article></div>
+      </div>
+    </section>
+    <section class="scene ink" id="section-6">
+      <div class="shell scene-inner" data-reveal>
+        <p class="kicker"><span>06 / 08</span> IN A REAL PRODUCT</p>
+        <h2>Materials change <em>the result.</em></h2>
+        <p class="intro">Product materials, the ground plane, mounting and enclosure can shift the final dimensions. Use simulation and measurements to refine the estimate.</p>
+      </div>
+    </section>
+    <section class="scene paper" id="section-7">
+      <div class="shell scene-inner" data-reveal>
+        <p class="kicker"><span>07 / 08</span> FREQUENCY UNITS</p>
+        <h2>MHz or <em>GHz?</em></h2>
+        <div class="faq"><details><summary>How do the units relate?</summary><p>1 GHz is 1,000 MHz. Enter 2.4 GHz or 2,400 MHz to calculate the same wavelength.</p></details><details><summary>What happens as frequency rises?</summary><p>The wavelength gets shorter because it is inversely proportional to frequency.</p></details></div>
+      </div>
+    </section>
+    <section class="scene ink" id="section-8">
+      <div class="shell scene-inner" data-reveal>
+        <p class="kicker"><span>08 / 08</span> NEXT STEP</p>
+        <h2>Turn an estimate <em>into a design.</em></h2>
+        <a class="pill" href="services.html">Explore design services <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-foot"><div class="shell foot-inner"><a href="index.html" class="brand"><img src="assets/sanct-mark.svg" alt="" width="40" height="40"><span>SANCT<span> GROUP</span></span></a><nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="antenna-calculator.html" aria-current="page">Calculator</a><a href="contact.html">Contact</a></nav><a href="mailto:info@sanctgroup.com">info@sanctgroup.com</a><small>© Sanct Group</small></div></footer>
+</body>
+</html>
+
